@@ -17,6 +17,10 @@
 | As a patron, I want to have kegs prices to be color-coded for easy readability.                                                      |
 | As a patron, I want to use the alcohol content property to display stronger beers differently than weaker beers.                     |
 
+## App Components Structure
+
+![](app_components_structure.png)
+
 ## Setup/Installation Requirements
 
 - _Clone this repository on your Desktop._
