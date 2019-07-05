@@ -17,6 +17,10 @@
 | As an employee, I want to be able to click a button next to a keg whenever I sell a pint of it.                                      |
 | As an employee, I want to be able to see kegs with less than 10 pints left so I can be ready to change them.                         |
 
+## App Components Structure
+
+![](app_components_structure.png)
+
 ## Setup/Installation Requirements
 
 - _Clone this repository on your Desktop._
