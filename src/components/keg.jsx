@@ -1,19 +1,22 @@
 import React, { Component } from "react";
 
 class Keg extends Component {
-  //   state = {
-  //     level: this.props.keg.level
-  //   };
-
   render() {
     return (
       <div>
-        <button
-          onClick={() => this.props.onSellPint(this.props.keg)}
-          className="btn btn-secondary btn-sm"
-        >
-          Sell 1 Pint
-        </button>
+        <tr>
+          <td>{this.props.keg.brand}</td>
+          <td>{this.props.keg.name}</td>
+          <td>{this.props.keg.price}</td>
+          <td>{this.props.keg.alcoholContent}</td>
+          <td>{this.props.keg.level}</td>
+          <button
+            onClick={() => this.props.onSellPint(this.props.keg)}
+            className="btn btn-secondary btn-sm"
+          >
+            Sell 1 Pint
+          </button>
+        </tr>
       </div>
     );
   }
