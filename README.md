@@ -32,6 +32,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Known Bugs / Limitations
 
 - _No bugs found at the moment._
+- _Registration/Login is not implemented yet._
 
 ## Support and contact details
 
