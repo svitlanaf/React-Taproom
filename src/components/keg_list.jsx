@@ -1,13 +1,23 @@
 import React, { Component } from "react";
 import { getKegList } from "../keg_list_data";
+import Keg from "./keg";
 
 class KegList extends Component {
   state = {
     kegList: getKegList()
   };
 
+  handleSellPint = keg => {
+    const kegs = [...this.state.kegList]; //cloning kegs array
+    const index = kegs.indexOf(keg); // getting keg id
+    kegs[index] = { ...keg };
+    kegs[index].value--; // decrementing keg value
+    this.setState({ kegs });
+  };
+
   render() {
     return (
+      //   <div>
       <table className="table">
         <thead>
           <tr>
@@ -27,11 +37,17 @@ class KegList extends Component {
               <td>{keg.price}</td>
               <td>{keg.alcoholContent}</td>
               <td>{keg.level}</td>
-              {/* <td /> */}
+              <Keg
+                // <td>
+                onSellPint={this.handleSellPint}
+                // </td>
+                keg={keg}
+              />
             </tr>
           ))}
         </tbody>
       </table>
+      //   </div>
     );
   }
 }

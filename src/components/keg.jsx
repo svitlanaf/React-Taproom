@@ -1,26 +1,19 @@
 import React, { Component } from "react";
 
 class Keg extends Component {
-  state = {
-    level: this.props.keg.level
-  };
-
-  //   handleSellPint =
-
-  //   sellPint(keg: Keg) {
-  //     if (keg.level > 0) {
-  //         keg.level -= 1;
-  //     }
+  //   state = {
+  //     level: this.props.keg.level
+  //   };
 
   render() {
     return (
       <div>
-        {/* <button
-                  onClick={() => this.handleSellPint(keg)}
-                  className="btn btn-primary btn-sm"
-                >
-                  Sell 1 Pint
-                </button> */}
+        <button
+          onClick={() => this.props.onSellPint(this.props.keg)}
+          className="btn btn-secondary btn-sm"
+        >
+          Sell 1 Pint
+        </button>
       </div>
     );
   }
