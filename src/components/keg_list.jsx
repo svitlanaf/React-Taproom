@@ -15,6 +15,7 @@ class KegList extends Component {
             <th>Name</th>
             <th>Price ($)</th>
             <th>Alcohol Content (%)</th>
+            <th>Level (pints)</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -25,14 +26,8 @@ class KegList extends Component {
               <td>{keg.name}</td>
               <td>{keg.price}</td>
               <td>{keg.alcoholContent}</td>
-              <td>
-                {/* <button
-                  onClick={() => this.handleDelete(movie)}
-                  className="btn btn-danger btn-sm"
-                >
-                  Delete
-                </button> */}
-              </td>
+              <td>{keg.level}</td>
+              {/* <td /> */}
             </tr>
           ))}
         </tbody>
