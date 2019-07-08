@@ -1,31 +1,25 @@
 import React, { Component } from "react";
 import NavBar from "./components/navbar";
-import KegList from "./components/keg_list";
+import Home from "./components/home";
+import NotFound from "./components/notFound";
+import NewKeg from "./components/newKeg";
+
+import { Route, Redirect, Switch } from "react-router-dom";
 import "./App.css";
-import { getKegList } from "./keg_list_data";
 
 class App extends Component {
-  state = {
-    kegList: getKegList()
-  };
-
-  handleSellPint = keg => {
-    const kegs = [...this.state.kegList]; //cloning kegs array
-    const index = kegs.indexOf(keg); // getting keg id
-    kegs[index] = { ...keg };
-    kegs[index].level--; // decrementing keg level
-    this.setState({ kegs });
-  };
-
   render() {
     return (
       <React.Fragment>
         <NavBar />
         <main className="container">
-          <KegList
-            kegList={this.state.kegList}
-            onSellPint={this.handleSellPint}
-          />
+          <Switch>
+            <Route path="/home" component={Home} />
+            <Route path="/not-found" component={NotFound} />
+            <Route path="/new-keg" component={NewKeg} />
+            <Redirect from="/" exact to="/home" />
+            <Redirect to="/not-found" />
+          </Switch>
         </main>
       </React.Fragment>
     );

@@ -33,6 +33,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - _No bugs found at the moment._
 - _Registration/Login is not implemented yet._
+- _New keg and Edit keg forms are not implemented yet._
 
 ## Support and contact details
 

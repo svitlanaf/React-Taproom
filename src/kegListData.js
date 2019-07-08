@@ -1,4 +1,4 @@
-export const kegList = [
+export const kegs = [
   {
     id: 0,
     brand: "Cloudburst Brewing",
@@ -81,6 +81,6 @@ export const kegList = [
   }
 ];
 
-export function getKegList() {
-  return kegList;
+export function getKegs() {
+  return kegs;
 }
