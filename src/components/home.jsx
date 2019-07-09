@@ -7,13 +7,17 @@ class Home extends Component {
     kegs: []
   };
 
+  componentDidMount() {
+    this.setState({ kegs: getKegs() });
+  }
+
   handleDelete = keg => {
     const kegs = this.state.kegs.filter(k => k.id !== keg.id);
     this.setState({ kegs });
   };
 
   handleSellPint = keg => {
-    const kegs = [...this.state.kegList]; //cloning kegs array
+    const kegs = [...this.state.kegs]; //cloning kegs array
     const index = kegs.indexOf(keg); // getting keg id
     kegs[index] = { ...keg };
     kegs[index].level--; // decrementing keg level
@@ -23,7 +27,7 @@ class Home extends Component {
   render() {
     return (
       <KegListTable
-        kegs={this.kegs}
+        kegs={this.state.kegs}
         onDelete={this.handleDelete}
         onSellPint={this.handleSellPint}
       />
