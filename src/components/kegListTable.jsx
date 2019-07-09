@@ -8,8 +8,8 @@ class KegListTable extends Component {
       label: "Brand"
     },
     { path: "name", label: "Name" },
-    { path: "price", label: "Price" },
-    { path: "alcoholContent", label: "Alcohol Content" },
+    { path: "price", label: "Price ($)" },
+    { path: "alcoholContent", label: "Alcohol Content (%)" },
     { path: "level", label: "Level" },
     {
       key: "sellPint",

@@ -26,6 +26,9 @@ function NavBar() {
           <NavLink className="nav-item nav-link" to="/new-keg">
             New Keg
           </NavLink>
+          <NavLink className="nav-item nav-link" to="/login">
+            Login
+          </NavLink>
         </div>
       </div>
     </nav>
