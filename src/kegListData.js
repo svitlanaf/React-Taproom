@@ -84,3 +84,23 @@ export const kegs = [
 export function getKegs() {
   return kegs;
 }
+
+export function getKeg(id) {
+  return kegs.find(k => k.id === id);
+}
+
+export function saveKeg(keg) {
+  let kegInDb = kegs.find(k => k.id === keg.id) || {};
+  kegInDb.brand = keg.brand;
+  kegInDb.name = keg.name;
+  kegInDb.price = keg.price;
+  kegInDb.alcoholContent = keg.alcoholContent;
+  kegInDb.level = keg.level;
+
+  if (!kegInDb.id) {
+    kegInDb.id = Date.now().toString();
+    kegs.push(kegInDb);
+  }
+
+  return kegInDb;
+}

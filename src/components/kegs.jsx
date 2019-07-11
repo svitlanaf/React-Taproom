@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import KegListTable from "./kegListTable";
 import { getKegs } from "./../kegListData";
 
-class Home extends Component {
+class Kegs extends Component {
   state = {
     kegs: []
   };
@@ -35,4 +35,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Kegs;
