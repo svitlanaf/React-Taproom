@@ -18,11 +18,12 @@ class App extends Component {
         <NavBar />
         <main className="container">
           <Switch>
+            <Route path="/kegs/:id" component={NewKegForm} />
             <Route path="/kegs" component={Kegs} />
             <Route path="/register" component={RegistrationForm} />
             <Route path="/login" component={LoginForm} />
             <Route path="/not-found" component={NotFound} />
-            <Route path="/new-keg" component={NewKegForm} />
+            {/* <Route path="/new-keg" component={NewKegForm} /> */}
             <Redirect from="/" exact to="/kegs" />
             <Redirect to="/not-found" />
           </Switch>

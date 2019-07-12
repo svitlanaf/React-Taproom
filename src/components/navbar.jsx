@@ -23,7 +23,7 @@ function NavBar() {
           <NavLink className="nav-item nav-link" to="/kegs">
             Kegs
           </NavLink>
-          <NavLink className="nav-item nav-link" to="/new-keg">
+          <NavLink className="nav-item nav-link" to="/kegs/new-keg">
             New Keg
           </NavLink>
           <NavLink className="nav-item nav-link" to="/login">

@@ -1,16 +1,16 @@
 import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/form";
-import { getKeg, saveKeg } from "./../kegListData";
+import { getKeg, saveKeg } from "../kegListData";
 
 class NewKegForm extends Form {
   state = {
     data: {
-      brand: " ",
-      name: " ",
-      price: " ",
-      alcoholContent: " ",
-      level: " "
+      brand: "",
+      name: "",
+      price: "",
+      alcoholContent: "",
+      level: ""
     },
     errors: {}
   };
@@ -36,16 +36,18 @@ class NewKegForm extends Form {
     level: Joi.string()
       .required()
       .min(0)
-      .max(100)
+      .max(124)
       .label("Level")
   };
 
   componentDidMount() {
-    // const kegId = this.props.match.params.id;
-    // if (kegId === "new") return;
-    // const keg = getKeg(kegId);
+    const kegId = this.props.match.params.id;
+    if (kegId === "new-keg") return;
+
+    const keg = getKeg(kegId);
     // if (!keg) return this.props.history.replace("/not-found");
-    // this.setState({ data: this.mapToViewModel(keg) });
+
+    this.setState({ data: this.mapToViewModel(keg) });
   }
 
   mapToViewModel(keg) {
@@ -61,7 +63,6 @@ class NewKegForm extends Form {
 
   doSubmit = () => {
     saveKeg(this.state.data);
-
     this.props.history.push("/kegs");
   };
 

@@ -7,7 +7,7 @@ class KegListTable extends Component {
     {
       path: "brand",
       label: "Brand",
-      content: keg => <Link to={`/kegs/${keg._id}`}>{keg.brand}</Link>
+      content: keg => <Link to={`/kegs/${keg.id}`}>{keg.brand}</Link>
     },
     { path: "name", label: "Name" },
     { path: "price", label: "Price ($)" },

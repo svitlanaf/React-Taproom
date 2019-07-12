@@ -85,8 +85,8 @@ export function getKegs() {
   return kegs;
 }
 
-export function getKeg(id) {
-  return kegs.find(k => k.id === id);
+export function getKeg(kegId) {
+  return kegs.find(k => k.id === kegId);
 }
 
 export function saveKeg(keg) {
