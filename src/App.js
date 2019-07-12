@@ -23,7 +23,6 @@ class App extends Component {
             <Route path="/register" component={RegistrationForm} />
             <Route path="/login" component={LoginForm} />
             <Route path="/not-found" component={NotFound} />
-            {/* <Route path="/new-keg" component={NewKegForm} /> */}
             <Redirect from="/" exact to="/kegs" />
             <Redirect to="/not-found" />
           </Switch>

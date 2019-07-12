@@ -6,6 +6,7 @@
     "@sentry/browser": "^5.5.0",
     "axios": "^0.18.1",
     "bootstrap": "^4.1.1",
+    "firebase": "^6.3.0",
     "joi-browser": "^13.4.0",
     "lodash": "^4.17.10",
     "prop-types": "^15.6.2",
