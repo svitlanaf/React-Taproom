@@ -23,17 +23,17 @@ class NewKegForm extends Form {
     name: Joi.string()
       .required()
       .label("Name"),
-    price: Joi.string()
+    price: Joi.number()
       .required()
       .min(0)
       .max(100)
       .label("Price ($)"),
-    alcoholContent: Joi.string()
+    alcoholContent: Joi.number()
       .required()
       .min(0)
       .max(100)
       .label("Alcohol Content (%)"),
-    level: Joi.string()
+    level: Joi.number()
       .required()
       .min(0)
       .max(124)

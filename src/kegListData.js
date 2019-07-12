@@ -1,6 +1,6 @@
 export const kegs = [
   {
-    id: 0,
+    id: "0",
     brand: "Cloudburst Brewing",
     name: "The Splash Zone Wet Hop Pale Ale",
     price: 6,
@@ -8,7 +8,7 @@ export const kegs = [
     level: 124
   },
   {
-    id: 1,
+    id: "1",
     brand: "Stoup Brewing",
     name: "Berliner Weisse",
     price: 7,
@@ -16,7 +16,7 @@ export const kegs = [
     level: 124
   },
   {
-    id: 2,
+    id: "2",
     brand: "Stillwater Artisanal",
     name: "Extra Dry Sake Style Saison",
     price: 8,
@@ -24,7 +24,7 @@ export const kegs = [
     level: 124
   },
   {
-    id: 3,
+    id: "3",
     brand: "Holy Mountain Brewing Co.",
     name: "Extra Dry Sake Style Saison",
     price: 8,
@@ -32,7 +32,7 @@ export const kegs = [
     level: 124
   },
   {
-    id: 4,
+    id: "4",
     brand: "Chuckanut Brewery",
     name: "Pilsner",
     price: 6,
@@ -40,7 +40,7 @@ export const kegs = [
     level: 124
   },
   {
-    id: 5,
+    id: "5",
     brand: "Modern Times Beer",
     name: "Space Ways IPA",
     price: 6,
@@ -48,7 +48,7 @@ export const kegs = [
     level: 124
   },
   {
-    id: 6,
+    id: "6",
     brand: "Cloudburst Brewing",
     name: "Waterworld Wet Hop IPA",
     price: 7,
@@ -56,7 +56,7 @@ export const kegs = [
     level: 124
   },
   {
-    id: 7,
+    id: "7",
     brand: "Holy Mountain Brewing Co.",
     name: "Vesper Brett Conditioned Table Beer",
     price: 8,
@@ -64,7 +64,7 @@ export const kegs = [
     level: 124
   },
   {
-    id: 8,
+    id: "8",
     brand: "Jolly Pumpkin Artisan Ales",
     name: "Smashed, Grabbed and Hop Dusted Sour IPA",
     price: 8,
@@ -72,7 +72,7 @@ export const kegs = [
     level: 124
   },
   {
-    id: 9,
+    id: "9",
     brand: "Holy Mountain Brewing Co.",
     name: "Fire of the World London-Style Porter",
     price: 7,
