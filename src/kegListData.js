@@ -104,3 +104,9 @@ export function saveKeg(keg) {
 
   return kegInDb;
 }
+
+export function deleteKeg(id) {
+  let kegInDb = kegs.find(k => k.id === id);
+  kegs.splice(kegs.indexOf(kegInDb), 1);
+  return kegInDb;
+}

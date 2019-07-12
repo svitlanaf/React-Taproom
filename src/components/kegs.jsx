@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import KegListTable from "./kegListTable";
-import { getKegs } from "./../kegListData";
+import { getKegs, deleteKeg } from "../kegListData";
 
 class Kegs extends Component {
   state = {
@@ -14,6 +14,7 @@ class Kegs extends Component {
   handleDelete = keg => {
     const kegs = this.state.kegs.filter(k => k.id !== keg.id);
     this.setState({ kegs });
+    deleteKeg(keg.id);
   };
 
   handleSellPint = keg => {

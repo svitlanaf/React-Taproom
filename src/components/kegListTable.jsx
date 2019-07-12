@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import Table from "./common/table";
+import { Link } from "react-router-dom";
 
 class KegListTable extends Component {
   columns = [
     {
       path: "brand",
-      label: "Brand"
+      label: "Brand",
+      content: keg => <Link to={`/kegs/${keg._id}`}>{keg.brand}</Link>
     },
     { path: "name", label: "Name" },
     { path: "price", label: "Price ($)" },
