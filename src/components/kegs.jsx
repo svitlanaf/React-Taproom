@@ -24,13 +24,16 @@ class Kegs extends Component {
     kegs[index] = { ...keg };
     kegs[index].level--; // decrementing keg level
     this.setState({ kegs });
+    if (kegs[index].level <= 10) {
+      alert("Refill me!");
+    }
   };
 
   filterByAlcoholContent = () => {
     const highAlcoholContent = !this.state.highAlcoholContent;
     let kegs = getKegs();
     if (highAlcoholContent) {
-      kegs = this.state.kegs.filter(k => k.alcoholContent >= 4);
+      kegs = this.state.kegs.filter(k => k.alcoholContent >= 5);
     }
     this.setState({ highAlcoholContent, kegs });
   };
@@ -45,7 +48,7 @@ class Kegs extends Component {
               checked={this.state.highAlcoholContent}
               onChange={this.filterByAlcoholContent}
             />{" "}
-            Kegs with alcohol content greater than 4%
+            Kegs with alcohol content greater than 5%
           </p>
         </form>
         <KegListTable
