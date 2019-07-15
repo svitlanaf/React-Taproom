@@ -3,7 +3,7 @@ export const kegs = [
     id: "0",
     brand: "Cloudburst Brewing",
     name: "The Splash Zone Wet Hop Pale Ale",
-    price: 6,
+    price: 5,
     alcoholContent: 5.6,
     level: 124
   },
@@ -26,7 +26,7 @@ export const kegs = [
   {
     id: "3",
     brand: "Holy Mountain Brewing Co.",
-    name: "Extra Dry Sake Style Saison",
+    name: "Extra Dry Saison",
     price: 8,
     alcoholContent: 3.8,
     level: 124
@@ -35,7 +35,7 @@ export const kegs = [
     id: "4",
     brand: "Chuckanut Brewery",
     name: "Pilsner",
-    price: 6,
+    price: 5,
     alcoholContent: 5,
     level: 124
   },

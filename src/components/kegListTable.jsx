@@ -28,6 +28,7 @@ class KegListTable extends Component {
       key: "delete",
       content: keg => (
         <button
+          style={{ backgroundColor: "red" }}
           onClick={() => this.props.onDelete(keg)}
           className="btn btn-danger btn-sm"
         >

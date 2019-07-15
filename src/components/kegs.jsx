@@ -5,7 +5,8 @@ import { getKegs, deleteKeg } from "../kegListData";
 class Kegs extends Component {
   state = {
     kegs: [],
-    highAlcoholContent: false
+    highAlcoholContent: false,
+    premiumBeer: false
   };
 
   componentDidMount() {
@@ -38,6 +39,15 @@ class Kegs extends Component {
     this.setState({ highAlcoholContent, kegs });
   };
 
+  filterByPrice = () => {
+    const premiumBeer = !this.state.premiumBeer;
+    let kegs = getKegs();
+    if (premiumBeer) {
+      kegs = this.state.kegs.filter(k => k.price >= 6);
+    }
+    this.setState({ premiumBeer, kegs });
+  };
+
   render() {
     return (
       <div>
@@ -49,6 +59,16 @@ class Kegs extends Component {
               onChange={this.filterByAlcoholContent}
             />{" "}
             Kegs with alcohol content greater than 5%
+          </p>
+        </form>
+        <form>
+          <p>
+            <input
+              type="checkbox"
+              checked={this.state.premiumBeer}
+              onChange={this.filterByPrice}
+            />{" "}
+            Premium beer
           </p>
         </form>
         <KegListTable
