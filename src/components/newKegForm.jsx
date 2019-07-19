@@ -2,6 +2,7 @@ import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/form";
 import { getKeg, saveKeg } from "../kegListData";
+import axios from "../../src/axios-db";
 
 class NewKegForm extends Form {
   state = {
@@ -62,8 +63,21 @@ class NewKegForm extends Form {
   }
 
   doSubmit = () => {
-    saveKeg(this.state.data);
-    this.props.history.push("/kegs");
+    console.log(axios);
+    // saveKeg(this.state.data);
+    // this.props.history.push("/kegs");
+    const newKeg = {
+      brand: this.state.data.brand,
+      name: this.state.data.name,
+      price: this.state.data.price,
+      alcoholContent: this.state.data.alcoholContent,
+      level: this.state.data.level
+    };
+    console.log(newKeg);
+    axios
+      .post("/kegs.json", newKeg)
+      .then(response => console.log(response))
+      .catch(error => console.log(error));
   };
 
   render() {
